@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>A Date with Jay ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="heartsCanvas"></div>
+
+<!-- 1. OPENING POPUP -->
+<div id="openingPopup" class="screen">
+  <div class="card">
+    <div class="envelope">💌</div>
+    <h1 id="greetingText">Hey there ❤️</h1>
+    <p>I have a little question for you…</p>
+    <button class="btn btn-primary" id="openBtn">Open 💌</button>
+  </div>
+</div>
+
+<!-- 2. QUESTION SCREEN -->
+<div id="questionScreen" class="screen hidden">
+  <div class="card question-box">
+    <h1>Will you go on a date with Jay? ❤️</h1>
+    <p id="noMessage"></p>
+    <div class="btn-row">
+      <button class="btn btn-yes" id="yesBtn">YES ❤️</button>
+      <button class="btn btn-no" id="noBtn">NO 😢</button>
+    </div>
+  </div>
+</div>
+
+<!-- 3. CELEBRATION SCREEN -->
+<div id="celebrationScreen" class="screen hidden">
+  <div class="card">
+    <h1>YAYYY! ❤️ IT'S A DATE!</h1>
+    <p>I knew you would say yes 😌💕</p>
+    <button class="btn btn-primary" id="planDateBtn">Plan Our Date →</button>
+  </div>
+</div>
+
+<!-- 4. DATE PLANNING FORM -->
+<div id="planningScreen" class="screen hidden">
+  <div class="card">
+    <h1>Let's Plan It! 💕</h1>
+    <form id="dateForm">
+      <div class="field">
+        <label for="dateInput">📅 Pick a date</label>
+        <input type="date" id="dateInput" required>
+      </div>
+      <div class="field">
+        <label for="timeInput">🕐 Meeting time</label>
+        <input type="time" id="timeInput" required>
+
+      </div>
+      <div class="field">
+        <label for="placeInput">📍 Meeting place</label>
+        <input type="text" id="placeInput" placeholder="e.g. Our favourite café" required>
+      </div>
+      <div class="field">
+        <label for="messageInput">💌 Optional message</label>
+        <textarea id="messageInput" placeholder="Say something sweet..."></textarea>
+      </div>
+      <div style="text-align:center;">
+        <button type="submit" class="btn btn-primary">Confirm Our Date ❤️</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 5. FINAL CONFIRMATION SCREEN -->
+<div id="finalScreen" class="screen hidden">
+  <div class="card">
+    <h1>Date Confirmed! ❤️</h1>
+    <div class="summary">
+      <p><strong>📅 Date:</strong> <span id="finalDate"></span></p>
+      <p><strong>🕐 Time:</strong> <span id="finalTime"></span></p>
+      <p><strong>📍 Place:</strong> <span id="finalPlace"></span></p>
+      <p id="finalMsgWrap"><strong>💌 Message:</strong> <span id="finalMsg"></span></p>
+    </div>
+    <p>Looking forward to spending some beautiful time with you. ❤️</p>
+    <footer>Made with ❤️ by Jay</footer>
+  </div>
+</div>
+
+<canvas id="confettiCanvas"></canvas>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
